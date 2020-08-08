@@ -4,9 +4,9 @@
 
 ### HTML
 
-- [ ] header
-- [ ] img
+- [x] header
 - [ ] text
+- [ ] img
 - [ ] footer
 
 ### CSS
