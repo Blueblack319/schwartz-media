@@ -1,3 +1,17 @@
-%announce {
-  font-size: 30px;
+@mixin name($direction) {
+  @if $direction == "right" {
+    .name {
+      margin-right: 80px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+  } @else if $direction == "left" {
+    .name {
+      margin-left: 80px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+  }
 }

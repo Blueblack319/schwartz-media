@@ -7,7 +7,7 @@
 }
 
 body {
-  margin-top: 65px;
+  margin-top: 55px;
 }
 
 header {
@@ -30,19 +30,40 @@ header {
   }
   .header__left {
     font-size: 25px;
-    .name {
-      margin-left: 80px;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -1px;
-    }
+    @include name("left");
   }
   .header__right {
-    .name {
-      margin-right: 80px;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -1px;
+    @include name("right");
+  }
+}
+
+main {
+  .intro {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 55px);
+    .picture {
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      img {
+        max-height: 100%;
+      }
+    }
+    .comment {
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .icon {
+      position: absolute;
+      bottom: 55px;
+      right: 55px;
+      font-size: 30px;
+      color: black;
     }
   }
 }
