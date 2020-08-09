@@ -7,7 +7,7 @@
 - [x] header
 - [x] text
 - [x] img
-- [ ] footer
+- [x] footer
 
 ### CSS
 
