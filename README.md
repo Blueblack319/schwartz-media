@@ -5,8 +5,8 @@
 ### HTML
 
 - [x] header
-- [ ] text
-- [ ] img
+- [x] text
+- [x] img
 - [ ] footer
 
 ### CSS
