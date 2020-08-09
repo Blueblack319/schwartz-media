@@ -21,6 +21,7 @@ const routes = {
 
 const watch = () => {
   gulp.watch(routes.style.watch, style);
+  gulp.watch(routes.image.src, img);
 };
 
 const clean = () => del(["dist"]);
