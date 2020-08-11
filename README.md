@@ -11,6 +11,6 @@
 
 ### CSS
 
-- [ ] header
-- [ ] grid
+- [x] header
+- [ ] flex
 - [ ] footer

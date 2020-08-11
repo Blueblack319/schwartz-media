@@ -1,6 +1,7 @@
+@import "_button.scss";
+@import "_font";
 @import "_reset";
 @import "_variables";
-@import "_font";
 
 * {
   box-sizing: border-box;
@@ -97,6 +98,7 @@ main {
     }
   }
 }
+
 section {
   width: 1040px;
   height: 405px;
@@ -131,15 +133,7 @@ section {
     }
     .buttons {
       margin-top: 55px;
-      button {
-        width: 145px;
-        height: 37px;
-        border: 0.5px solid $grey;
-        border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0);
-        font-size: 15px;
-        font-weight: 600;
-      }
+      @extend %button;
     }
   }
   .picture {
@@ -149,33 +143,95 @@ section {
       height: 100%;
     }
   }
+
   &.different {
     height: 605px;
     .left,
     .right {
+      display: flex;
+      flex-direction: column;
       .title {
         font-size: 25px;
         font-weight: 600;
+        padding-bottom: 40px;
       }
       .picture {
-        padding: 35px 0px;
-        height: auto;
+        width: 505px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
       .comment {
         font-size: 23px;
-        padding-bottom: 50px;
+        line-height: 1.3;
       }
       .buttons {
-        button {
-          width: 145px;
-          height: 37px;
-          border: 0.5px solid $grey;
-          border-radius: 20px;
-          background-color: rgba(255, 255, 255, 0);
-          font-size: 15px;
-          font-weight: 600;
-        }
+        @extend %button;
+        margin-top: auto;
       }
     }
+  }
+
+  &.footer {
+    height: 318px;
+    article {
+      padding-right: 50px;
+      .title {
+        font-size: 25px;
+        font-weight: 600;
+        padding-bottom: 50px;
+      }
+      .comment {
+        font-size: 23px;
+        letter-spacing: -1px;
+      }
+      .buttons {
+        margin-top: 40px;
+        @extend %button;
+      }
+    }
+  }
+}
+
+footer {
+  height: 300px;
+  background-color: #464646;
+  color: white;
+  display: flex;
+  justify-content: center;
+  section {
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -3px;
+    }
+    .links > * {
+      display: block;
+      &.copyright {
+        padding-top: 30px;
+      }
+    }
+  }
+
+  .right {
+    .links {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      letter-spacing: -1px;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
   }
 }
